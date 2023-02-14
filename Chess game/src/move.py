@@ -1,0 +1,13 @@
+class move:
+    def __init__(self,initial,final):
+        self.initial=initial
+        self.final=final
+
+    def __str__(self):
+        s=''
+        s+=f'({self.initial.col},{self.initial.row})'
+        s+=f'({self.final.col},{self.final.row})'
+        return s
+
+    def __eq__(self,other):  #dunder method
+        return self.initial==other.initial and self.final==other.final
